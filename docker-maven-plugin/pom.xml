@@ -21,9 +21,9 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/185594-5-27/docker-develop-maven-plugin</url>
-    <connection>https://github.com/185594-5-27/docker-develop-maven-plugin.git</connection>
-    <developerConnection>https://github.com/185594-5-27/docker-develop-maven-plugin</developerConnection>
+    <url>https://github.com/lazyboyl/docker-develop-maven-plugin</url>
+    <connection>https://github.com/lazyboyl/docker-develop-maven-plugin.git</connection>
+    <developerConnection>https://github.com/lazyboyl/docker-develop-maven-plugin</developerConnection>
   </scm>
 
   <dependencies>
