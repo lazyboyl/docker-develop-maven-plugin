@@ -1,4 +1,4 @@
-FROM base-jdk8
+FROM base-jdk
    MAINTAINER linzf <282245889@qq.com>
    RUN mkdir -p /app/www/logs/docker-plugin-test/log/
    RUN mkdir -p /home/app/

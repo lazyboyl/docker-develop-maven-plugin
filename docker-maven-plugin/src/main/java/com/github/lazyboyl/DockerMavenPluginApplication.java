@@ -194,6 +194,8 @@ public class DockerMavenPluginApplication extends AbstractMojo {
                     // 启动镜像
                     DockerManage.dockerImageStart(conn, dockerRun);
                 }
+            } else {
+                log.info("镜像创建失败，失败原因：{}", sshResult.getMsg());
             }
         }
     }

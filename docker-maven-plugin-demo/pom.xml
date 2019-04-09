@@ -54,12 +54,12 @@
                     <containerRunShare>/home/app/logs/docker-plugin-test/log/:/app/www/logs/docker-plugin-test/log/</containerRunShare>
                     <!-- 该工程启动的时候的端口映射,多个端口那就对应着启动多少个容器 -->
                     <containerRunPorts>
-                        <containerRunPort>8081:8081</containerRunPort>
+                        <containerRunPort>8080:8080</containerRunPort>
                     </containerRunPorts>
                     <options>
                         <!-- 服务器的ip,账号,密码 -->
                         <option>
-                            10.10.10.125,root,1qaz2wsx
+                            192.168.182.128,root,123456
                         </option>
                     </options>
                 </configuration>
