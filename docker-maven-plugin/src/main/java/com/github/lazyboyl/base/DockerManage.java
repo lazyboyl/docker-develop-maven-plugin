@@ -150,7 +150,7 @@ public class DockerManage {
             session = conn.openSession();
             String dockerStartCommand = DockerCommands.DOCKER_START + dockerRun.toString();
             String dockerStartCommandResult = LinuxManage.getSessionResult(conn, dockerStartCommand);
-            log.info("dockerStartCommandResult：{}", dockerStartCommandResult);
+            log.info("dockerStartCommandResult：{}，执行的命令为：{}", dockerStartCommandResult,dockerStartCommand);
             // 判断当前的容器是否启动成功
             SshResult sshResult = getDockerContainers(conn, dockerRun.getName());
             if (sshResult.isSuccess()) {

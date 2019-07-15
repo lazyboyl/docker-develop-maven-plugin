@@ -58,7 +58,12 @@ public class LinuxManage {
         boolean flg;
         Connection conn = null;
         try {
-            conn = new Connection(ip);
+            String[] ips = ip.split(":");
+            if(ips.length>1){
+                conn = new Connection(ips[0],Integer.parseInt(ips[1]));
+            }else{
+                conn = new Connection(ip);
+            }
             //连接
             conn.connect();
             //认证

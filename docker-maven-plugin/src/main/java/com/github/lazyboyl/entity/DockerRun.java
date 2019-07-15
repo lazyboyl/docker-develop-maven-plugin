@@ -92,7 +92,12 @@ public class DockerRun {
             command.append(" -d ");
         }
         if(port!=null&&!"".equals(port)){
-            command.append(" -p "+port);
+            String [] ports = port.split(",");
+            for(String p:ports){
+                if(!"".equals(p)){
+                    command.append(" -p "+p);
+                }
+            }
         }
         if(share!=null&&!"".equals(share)){
             command.append(" -v "+share);
