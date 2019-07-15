@@ -40,7 +40,7 @@ option | 服务器的ip,账号,密码他们使用以下模板的方式填入： 
                           <plugin>
                               <groupId>com.github.lazyBoyl</groupId>
                               <artifactId>docker-maven-plugin</artifactId>
-                              <version>1.0-SNAPSHOT</version>
+                              <version>1.0-release</version>
                               <configuration>
                                   <!-- 本地package以后生成的jar包的完整路径 -->
                                   <jarTargetPath>${basedir}/target/docker-maven-plugin-demo.jar</jarTargetPath>
