@@ -1,4 +1,6 @@
 # docker-develop-maven-plugin - 一个帮助开发人员专注于开发而不用浪费时间在打包和发布docker的插件
+## 当前版本
+当前使用的版本为1.1-release版本
 ## 使用前提
 使用该插件的开发人员，需要了解linux系统和docker，如果暂时对这两块还没有了解的可以先去了解了先。
 ## 写在插件开发之前
@@ -21,6 +23,7 @@ containerRunPorts | 该应用启动的时候的端口映射,多个端口那就�
 containerRunPort | 具体端口映射的配置位置 | Y
 options | 服务器的信息的集合 | Y
 option | 服务器的ip,账号,密码他们使用以下模板的方式填入： 10.10.10.114,root,1qaz2wsx | Y
+netType | 网络连接方式：【默认为bridge，可选值有：none、container、host】 | N 
 ## 快速开始
 1. 由于该项目没有将maven依赖上传到maven的服务器，因此大家无法正常下载该依赖，大家可以直接把这个工程给git到
 本地，然后使用install命令将这个插件安装到本地的maven依赖，或者大家可以直接打开doc文件夹底下的quick_start，
@@ -52,7 +55,7 @@ option | 服务器的ip,账号,密码他们使用以下模板的方式填入： 
                                   <containerRunShare>/home/app/logs/docker-plugin-test/log/:/app/www/logs/docker-plugin-test/log/</containerRunShare>
                                   <!-- 该工程启动的时候的端口映射,多个端口那就对应着启动多少个容器 -->
                                   <containerRunPorts>
-                                      <containerRunPort>8081:8081</containerRunPort>
+                                      <containerRunPort>8081:8081,9090:9090</containerRunPort>
                                   </containerRunPorts>
                                   <options>
                                       <!-- 服务器的ip,账号,密码 -->
