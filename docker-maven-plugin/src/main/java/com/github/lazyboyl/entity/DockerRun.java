@@ -37,6 +37,8 @@ public class DockerRun {
      */
     private String netType;
 
+
+
     public String getNetType() {
         return netType;
     }
@@ -102,14 +104,14 @@ public class DockerRun {
         if(share!=null&&!"".equals(share)){
             command.append(" -v "+share);
         }
+        if(netType!=null&&!"".equals(netType)){
+            command.append(" --net=" + netType);
+        }
         if(name!=null&&!"".equals(name)){
             command.append(" --name "+name);
         }
         if(image!=null&&!"".equals(image)){
             command.append(" "+image);
-        }
-        if(netType!=null&&!"".equals(netType)){
-            command.append(" --net=" + netType);
         }
         return command.toString();
     }
